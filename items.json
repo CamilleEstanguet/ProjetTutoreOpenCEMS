@@ -1,0 +1,957 @@
+{
+  "listeItem": [
+    {
+      "key": "file",
+      "type": "data",
+      "name": "File",
+      "image_file_name": "File.png",
+      "input": false,
+      "output": true,
+      "output_data_type": "Data",
+      "description": {
+        "titre": "Feature Constructor",
+        "description": "Construct new features (data columns) from a set of existing features in the input dataset."
+      },
+      "service": {
+        "url": "url",
+        "config": [
+          {
+            "label": "File:",
+            "type": "file"
+          },
+          {
+            "label": "URL: ",
+            "type": "url"
+          }
+        ]
+      },
+      "linkableTo": [
+        "linearProjection",
+        "knn",
+        "predictions",
+        "OutliersValues",
+        "kmeans"
+      ]
+    },
+    {
+      "key": "sqltable",
+      "type": "data",
+      "name": "SQL Table",
+      "image_file_name": "SQLTable.png",
+      "input": false,
+      "output": true,
+      "output_data_type": "Data",
+      "description": {
+        "titre": "SQL Table",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+      },
+      "service": {
+        "url": "url",
+        "config": [
+          {
+            "label": "File:",
+            "type": "file"
+          },
+          {
+            "label": "URL: ",
+            "type": "url"
+          }
+        ]
+      },
+      "linkableTo": [
+        "linearProjection",
+        "knn",
+        "predictions"
+      ]
+    },
+    {
+      "key": "pythonscript",
+      "type": "data",
+      "name": "Python Script",
+      "image_file_name": "PythonScript.png",
+      "input": false,
+      "output": true,
+      "output_data_type": "Data",
+      "description": {
+        "titre": "SQL Table",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+      },
+      "service": {
+        "url": "url",
+        "config": [
+          {
+            "label": "File:",
+            "type": "file"
+          },
+          {
+            "label": "URL: ",
+            "type": "url"
+          }
+        ]
+      },
+      "linkableTo": [
+        "linearProjection",
+        "knn",
+        "predictions"
+      ]
+    },
+    {
+      "key": "airtemperature",
+      "type": "data",
+      "name": "Air Temperature Collection",
+      "image_file_name": "AirTemperatureCollection.png",
+      "input": false,
+      "output": true,
+      "output_data_type": "Data",
+      "description": {
+        "titre": "Collect Air Temperature",
+        "description": "This service provides a dataset of air temperature observations."
+      },
+      "service": {
+        "url": "url",
+        "config": [
+          {
+            "label": "File:",
+            "type": "file"
+          },
+          {
+            "label": "URL: ",
+            "type": "url"
+          }
+        ]
+      },
+      "linkableTo": [
+        "EnergyDemand",
+        "OutliersValues"
+      ]
+    },
+    {
+      "key": "ClimateTemperature",
+      "type": "data",
+      "name": "Climate Temperature Collection",
+      "image_file_name": "ClimateTemperatureCollection.png",
+      "output": true,
+      "input": false,
+      "output_data_type": "Data",
+      "description": {
+        "titre": "Collect Climate Temperature",
+        "description": "This service provides a dataset of climate temperature observations."
+      },
+      "service": {
+        "url": "url",
+        "config": [
+          {
+            "label": "File:",
+            "type": "file"
+          },
+          {
+            "label": "URL: ",
+            "type": "url"
+          }
+        ]
+      },
+      "linkableTo": [
+        "MissingValues",
+        "OutliersValues"
+      ]
+    },
+    {
+      "key": "plot",
+      "type": "visualize",
+      "name": "Plot",
+      "image_file_name": "Plot.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "Data",
+      "description": {
+        "titre": "Plot",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "field_label1": "value1"
+          }
+        ]
+      },
+      "linkableTo": [
+        "linearProjection",
+        "knn",
+        "predictions"
+      ]
+    },
+    {
+      "key": "table",
+      "type": "visualize",
+      "name": "Table",
+      "image_file_name": "Table.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "Data",
+      "description": {
+        "titre": "Plot",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "field_label1": "value1"
+          }
+        ]
+      },
+      "linkableTo": [
+        "linearProjection",
+        "knn",
+        "predictions"
+      ]
+    },
+    {
+      "key": "knn",
+      "type": "model",
+      "name": "kNN",
+      "image_file_name": "KNN.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "model",
+      "description": {
+        "titre": "kNN",
+        "description": "Predict accoriding to the nearest training instances."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "label": "Name",
+            "type": "text"
+          },
+          {
+            "label": "Number of neighbors",
+            "type": "number"
+          },
+          {
+            "label": "Metric",
+            "type": "list",
+            "listOption": [
+              "Euclidean",
+              "Manhattan",
+              "Chebyshev",
+              "Mahalanobis"
+            ]
+          },
+          {
+            "label": "Weight",
+            "type": "list",
+            "listOption": [
+              "Uniform",
+              "Distance"
+            ]
+          }
+        ]
+      },
+      "linkableTo": [
+        "predictions",
+         "EnergyDemand"
+      ]
+    },
+    {
+      "key": "datatraining",
+      "type": "model",
+      "name": "Data Training",
+      "image_file_name": "DataTraining.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "model",
+      "description": {
+        "titre": "Data Training",
+        "description": "Predict accoriding to the nearest training instances."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "label": "Name",
+            "type": "text"
+          },
+          {
+            "label": "Number of neighbors",
+            "type": "number"
+          },
+          {
+            "label": "Metric",
+            "type": "list",
+            "listOption": [
+              "Euclidean",
+              "Manhattan",
+              "Chebyshev",
+              "Mahalanobis"
+            ]
+          },
+          {
+            "label": "Weight",
+            "type": "list",
+            "listOption": [
+              "Uniform",
+              "Distance"
+            ]
+          }
+        ]
+      },
+      "linkableTo": [
+        "predictions"
+      ]
+    },
+    {
+      "key": "ann",
+      "type": "model",
+      "name": "ANN",
+      "image_file_name": "ANN.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "model",
+      "description": {
+        "titre": "ANN",
+        "description": "Predict accoriding to the nearest training instances."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "label": "Name",
+            "type": "text"
+          },
+          {
+            "label": "Number of neighbors",
+            "type": "number"
+          },
+          {
+            "label": "Metric",
+            "type": "list",
+            "listOption": [
+              "Euclidean",
+              "Manhattan",
+              "Chebyshev",
+              "Mahalanobis"
+            ]
+          },
+          {
+            "label": "Weight",
+            "type": "list",
+            "listOption": [
+              "Uniform",
+              "Distance"
+            ]
+          }
+        ]
+      },
+      "linkableTo": [
+        "predictions"
+      ]
+    },
+    {
+      "key": "RegressionNeuraLNetwork",
+      "type": "model",
+      "name": "Regression Neural Network",
+      "image_file_name": "RegressionNeuraLNetwork.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "model",
+      "description": {
+        "titre": "Regression Neural Network",
+        "description": "Predict accoriding to the nearest training instances."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "label": "Name",
+            "type": "text"
+          },
+          {
+            "label": "Number of neighbors",
+            "type": "number"
+          },
+          {
+            "label": "Metric",
+            "type": "list",
+            "listOption": [
+              "Euclidean",
+              "Manhattan",
+              "Chebyshev",
+              "Mahalanobis"
+            ]
+          },
+          {
+            "label": "Weight",
+            "type": "list",
+            "listOption": [
+              "Uniform",
+              "Distance"
+            ]
+          }
+        ]
+      },
+      "linkableTo": [
+        "predictions"
+      ]
+    },
+    {
+      "key": "svm",
+      "type": "model",
+      "name": "SVM",
+      "image_file_name": "SVM.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "model",
+      "description": {
+        "titre": "SVM",
+        "description": "Predict accoriding to the nearest training instances."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "label": "Name",
+            "type": "text"
+          },
+          {
+            "label": "Number of neighbors",
+            "type": "number"
+          },
+          {
+            "label": "Metric",
+            "type": "list",
+            "listOption": [
+              "Euclidean",
+              "Manhattan",
+              "Chebyshev",
+              "Mahalanobis"
+            ]
+          },
+          {
+            "label": "Weight",
+            "type": "list",
+            "listOption": [
+              "Uniform",
+              "Distance"
+            ]
+          }
+        ]
+      },
+      "linkableTo": [
+        "predictions"
+      ]
+    },
+    {
+      "key": "svr",
+      "type": "model",
+      "name": "SVR",
+      "image_file_name": "SVR.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "model",
+      "description": {
+        "titre": "SVR",
+        "description": "Predict accoriding to the nearest training instances."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "label": "Name",
+            "type": "text"
+          },
+          {
+            "label": "Number of neighbors",
+            "type": "number"
+          },
+          {
+            "label": "Metric",
+            "type": "list",
+            "listOption": [
+              "Euclidean",
+              "Manhattan",
+              "Chebyshev",
+              "Mahalanobis"
+            ]
+          },
+          {
+            "label": "Weight",
+            "type": "list",
+            "listOption": [
+              "Uniform",
+              "Distance"
+            ]
+          }
+        ]
+      },
+      "linkableTo": [
+        "predictions"
+      ]
+    },
+    {
+      "key": "multilinearregression",
+      "type": "model",
+      "name": "Multi-Linear Regression",
+      "image_file_name": "MultiLinearRegression.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "model",
+      "description": {
+        "titre": "Multi-Linear Regression",
+        "description": "Predict accoriding to the nearest training instances."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "label": "Name",
+            "type": "text"
+          },
+          {
+            "label": "Number of neighbors",
+            "type": "number"
+          },
+          {
+            "label": "Metric",
+            "type": "list",
+            "listOption": [
+              "Euclidean",
+              "Manhattan",
+              "Chebyshev",
+              "Mahalanobis"
+            ]
+          },
+          {
+            "label": "Weight",
+            "type": "list",
+            "listOption": [
+              "Uniform",
+              "Distance"
+            ]
+          }
+        ]
+      },
+      "linkableTo": [
+        "predictions"
+      ]
+    },
+    {
+      "key": "decisiontree",
+      "type": "model",
+      "name": "Decision Tree",
+      "image_file_name": "DecisionTree.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "model",
+      "description": {
+        "titre": "Decision Tree",
+        "description": "Predict accoriding to the nearest training instances."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "label": "Name",
+            "type": "text"
+          },
+          {
+            "label": "Number of neighbors",
+            "type": "number"
+          },
+          {
+            "label": "Metric",
+            "type": "list",
+            "listOption": [
+              "Euclidean",
+              "Manhattan",
+              "Chebyshev",
+              "Mahalanobis"
+            ]
+          },
+          {
+            "label": "Weight",
+            "type": "list",
+            "listOption": [
+              "Uniform",
+              "Distance"
+            ]
+          }
+        ]
+      },
+      "linkableTo": [
+        "predictions"
+      ]
+    },
+    {
+      "key": "bayesian",
+      "type": "model",
+      "name": "Bayesian",
+      "image_file_name": "Bayesian.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "model",
+      "description": {
+        "titre": "Bayesian",
+        "description": "Predict accoriding to the nearest training instances."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "label": "Name",
+            "type": "text"
+          },
+          {
+            "label": "Number of neighbors",
+            "type": "number"
+          },
+          {
+            "label": "Metric",
+            "type": "list",
+            "listOption": [
+              "Euclidean",
+              "Manhattan",
+              "Chebyshev",
+              "Mahalanobis"
+            ]
+          },
+          {
+            "label": "Weight",
+            "type": "list",
+            "listOption": [
+              "Uniform",
+              "Distance"
+            ]
+          }
+        ]
+      },
+      "linkableTo": [
+        "predictions",
+      "EnergyDemand"
+      ]
+    },
+
+    {
+      "key": "predictions",
+      "type": "evaluate",
+      "name": "Predictions",
+      "image_file_name": "Prediction.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "Prediction -> data",
+      "description": {
+        "titre": "Predictions",
+        "description": "Display predictions of models for an input dataset."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "field_label1": "value1"
+          }
+        ]
+      },
+      "linkableTo": [
+        "linearProjection",
+        "knn",
+        "predictions",
+      "EnergyDemand"
+      ]
+    },
+    {
+      "key": "EnergyDemand",
+      "type": "evaluate",
+      "name": "Energy Demand Prediction",
+      "image_file_name": "EnergyDemand.png",
+      "input": true,
+      "output": false,
+      "description": {
+        "titre": "Energy Demand Prediction",
+        "description": "This service provides a dataset of climate temperature observations."
+      },
+      "service": {
+        "url": "url",
+        "config": [
+          {
+            "label": "File:",
+            "type": "file"
+          },
+          {
+            "label": "URL: ",
+            "type": "url"
+          }
+        ]
+      },
+      "linkableTo": [
+        "MissingValuesInterpolation",
+        "OutliersValuesInterpolation",
+      "KNN"
+      ]
+    },
+    {
+      "key": "MissingValues",
+      "type": "Preprocessing",
+      "name": "Missing Values Detection",
+      "image_file_name": "MissingValuesDetection.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "Data",
+      "description": {
+        "titre": "Detect missing values",
+        "description": "This service provides a dataset of climate temperature observations."
+      },
+      "service": {
+        "url": "url",
+        "config": [
+          {
+            "label": "File:",
+            "type": "file"
+          },
+          {
+            "label": "URL: ",
+            "type": "url"
+          }
+        ]
+      },
+      "linkableTo": [
+        "ClimateTemperature",
+        "MissingValuesInterpolation"
+      ]
+    },
+    {
+      "key": "MissingValuesInterpolation",
+      "type": "Preprocessing",
+      "name": "Missing Values Interpolation",
+      "image_file_name": "MissingValuesInterpolation.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "Data",
+      "description": {
+        "titre": "Interpolate missing values",
+        "description": "This service provides a dataset of climate temperature observations."
+      },
+      "service": {
+        "url": "url",
+        "config": [
+          {
+            "label": "File:",
+            "type": "file"
+          },
+          {
+            "label": "URL: ",
+            "type": "url"
+          }
+        ]
+      },
+      "linkableTo": [
+        "MissingValues",
+        "EnergyDemand"
+      ]
+    },
+    {
+      "key": "OutliersValues",
+      "type": "Preprocessing",
+      "name": "Anomaly Detection",
+      "image_file_name": "OutlierValuesDetection.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "Data",
+      "description": {
+        "titre": "Detect outliers values",
+        "description": "This service provides a dataset of climate temperature observations."
+      },
+      "service": {
+        "url": "url",
+        "config": [
+          {
+            "label": "File:",
+            "type": "file"
+          },
+          {
+            "label": "URL: ",
+            "type": "url"
+          }
+        ]
+      },
+      "linkableTo": [
+        "ClimateTemperature",
+        "OutliersValuesInterpolation",
+      	"plot"
+      ]
+    },
+    {
+      "key": "OutliersValuesInterpolation",
+      "type": "Preprocessing",
+      "name": "Outliers Values Interpolation",
+      "image_file_name": "OutlierValuesInterpolation.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "Data",
+      "description": {
+        "titre": "Interpolate outliers values",
+        "description": "This service provides a dataset of climate temperature observations."
+      },
+      "service": {
+        "url": "url",
+        "config": [
+          {
+            "label": "File:",
+            "type": "file"
+          },
+          {
+            "label": "URL: ",
+            "type": "url"
+          }
+        ]
+      },
+      "linkableTo": [
+        "OutlierValues",
+        "EnergyDemand"
+      ]
+    },
+    {
+      "key": "normalization",
+      "type": "Preprocessing",
+      "name": "Normalization",
+      "image_file_name": "Normalization.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "Data",
+      "description": {
+        "titre": "Normalization",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+      },
+      "service": {
+        "url": "url",
+        "config": [
+          {
+            "label": "File:",
+            "type": "file"
+          },
+          {
+            "label": "URL: ",
+            "type": "url"
+          }
+        ]
+      },
+      "linkableTo": [
+        "ClimateTemperature",
+        "OutliersValuesInterpolation"
+      ]
+    },
+
+
+
+
+    {
+      "key": "kmeans",
+      "type": "unsupervised",
+      "name": "K-Means",
+      "image_file_name": "K-Means.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "",
+      "description": {
+        "titre": "K-Means",
+        "description": "Display a dendrogram of a hierarchical clustering constructed from the input distance matrix."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "field_label1": "value1"
+          }
+        ]
+      },
+      "linkableTo": [
+        "linearProjection",
+        "knn",
+        "predictions",
+        "plot"
+      ]
+    },
+
+    {
+      "key": "kmedoids",
+      "type": "unsupervised",
+      "name": "K-Medoids",
+      "image_file_name": "K-Medoids.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "",
+      "description": {
+        "titre": "K-Medoids",
+        "description": "Display a dendrogram of a hierarchical clustering constructed from the input distance matrix."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "field_label1": "value1"
+          }
+        ]
+      },
+      "linkableTo": [
+        "linearProjection",
+        "knn",
+        "predictions"
+      ]
+    },
+
+    {
+      "key": "dbscan",
+      "type": "unsupervised",
+      "name": "DB-Scan",
+      "image_file_name": "DB-Scan.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "",
+      "description": {
+        "titre": "DB-Scan",
+        "description": "Display a dendrogram of a hierarchical clustering constructed from the input distance matrix."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "field_label1": "value1"
+          }
+        ]
+      },
+      "linkableTo": [
+        "linearProjection",
+        "knn",
+        "predictions"
+      ]
+    },
+
+    {
+      "key": "hierarchicalClustering",
+      "type": "unsupervised",
+      "name": "Hierarchical Clustering",
+      "image_file_name": "HierarchicalClustering.png",
+      "input": true,
+      "output": true,
+      "output_data_type": "",
+      "description": {
+        "titre": "Hierarchical Clustering",
+        "description": "Display a dendrogram of a hierarchical clustering constructed from the input distance matrix."
+      },
+      "service": {
+        "url": "valeur de l'url",
+        "config": [
+          {
+            "field_label1": "value1"
+          }
+        ]
+      },
+      "linkableTo": [
+        "linearProjection",
+        "knn",
+        "predictions"
+      ]
+    }
+  ]
+}
