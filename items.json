@@ -43,7 +43,7 @@
       "output_data_type": "Data",
       "description": {
         "titre": "SQL Table",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+        "description": "Use SQL tables from a database as a source of data for your composition."
       },
       "service": {
         "url": "url",
@@ -56,25 +56,42 @@
             "label": "URL: ",
             "type": "url"
           }
+          {
+            "label":"database",
+            "type": "list",
+            "listOption": [
+              "mySQL",
+              "Oracle",
+              "mySQLi",
+              "PostgreSQL",
+              "MariaDB",
+              "Firebird"
+            ]
+
+          }
         ]
       },
       "linkableTo": [
+        "MissingValuesDetection",
+        "MissingValuesInterpolation,"
+        "Anomaly Detection",
+        "OutliersValues",
         "linearProjection",
         "knn",
         "predictions"
       ]
     },
     {
-      "key": "pythonscript",
+      "key": "script",
       "type": "data",
-      "name": "Python Script",
+      "name": "Script",
       "image_file_name": "PythonScript.png",
       "input": false,
       "output": true,
       "output_data_type": "Data",
       "description": {
-        "titre": "SQL Table",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+        "titre": "Script",
+        "description": "A programming script that you can use as an input of data in your composition"
       },
       "service": {
         "url": "url",
@@ -86,6 +103,17 @@
           {
             "label": "URL: ",
             "type": "url"
+          }
+          {
+            "label": "Language",
+            "type": "list",
+            "listOption": [
+              "Python",
+              "C++",
+              "C#",
+              "Java",
+              "Julia"
+            ]
           }
         ]
       },
