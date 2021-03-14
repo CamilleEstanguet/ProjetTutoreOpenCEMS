@@ -146,6 +146,16 @@
             "label": "URL: ",
             "type": "url"
           }
+          {
+            "type": "list",
+            "listOption": [
+              "CSV",
+              "Json",
+              "XML",
+              "YAML",
+              "RDF"
+            ]
+          }
         ]
       },
       "linkableTo": [
@@ -175,6 +185,17 @@
           {
             "label": "URL: ",
             "type": "url"
+          }
+          {
+            "label": "Format",
+            "type": "list",
+            "listOption": [
+              "CSV",
+              "Json",
+              "XML",
+              "YAML",
+              "RDF"
+            ]
           }
         ]
       },
