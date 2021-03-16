@@ -147,13 +147,12 @@
             "type": "url"
           }
           {
-            "type": "list",
+            "label": "Unit of temperature",
+            "type": "unit",
             "listOption": [
-              "CSV",
-              "Json",
-              "XML",
-              "YAML",
-              "RDF"
+              "C°",
+              "F°",
+              "K°"
             ]
           }
         ]
@@ -168,8 +167,8 @@
       "type": "data",
       "name": "Climate Temperature Collection",
       "image_file_name": "ClimateTemperatureCollection.png",
-      "output": true,
       "input": false,
+      "output": true,
       "output_data_type": "Data",
       "description": {
         "titre": "Collect Climate Temperature",
@@ -187,14 +186,12 @@
             "type": "url"
           }
           {
-            "label": "Format",
-            "type": "list",
+            "label": "Unit of temperature",
+            "type": "unit",
             "listOption": [
-              "CSV",
-              "Json",
-              "XML",
-              "YAML",
-              "RDF"
+              "C°",
+              "F°",
+              "K°"
             ]
           }
         ]
