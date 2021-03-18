@@ -146,6 +146,15 @@
             "label": "URL: ",
             "type": "url"
           }
+          {
+            "label": "Unit of temperature",
+            "type": "list",
+            "listOption": [
+              "C°",
+              "F°",
+              "K°"
+            ]
+          }
         ]
       },
       "linkableTo": [
@@ -158,8 +167,8 @@
       "type": "data",
       "name": "Climate Temperature Collection",
       "image_file_name": "ClimateTemperatureCollection.png",
-      "output": true,
       "input": false,
+      "output": true,
       "output_data_type": "Data",
       "description": {
         "titre": "Collect Climate Temperature",
@@ -175,6 +184,15 @@
           {
             "label": "URL: ",
             "type": "url"
+          }
+          {
+            "label": "Unit of temperature",
+            "type": "list",
+            "listOption": [
+              "C°",
+              "F°",
+              "K°"
+            ]
           }
         ]
       },
