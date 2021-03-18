@@ -22,6 +22,9 @@
           {
             "label": "URL: ",
             "type": "url"
+          },
+          {
+            "field_label1": "Extension"
           }
         ]
       },
@@ -29,6 +32,7 @@
         "linearProjection",
         "knn",
         "predictions",
+        "MissingValues",
         "OutliersValues",
         "kmeans"
       ]
@@ -43,7 +47,7 @@
       "output_data_type": "Data",
       "description": {
         "titre": "SQL Table",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+        "description": "Use SQL tables from a database as a source of data for your composition."
       },
       "service": {
         "url": "url",
@@ -55,26 +59,44 @@
           {
             "label": "URL: ",
             "type": "url"
+          },
+          {
+            "label":"database",
+            "type": "list",
+            "listOption": [
+              "mySQL",
+              "Oracle",
+              "mySQLi",
+              "PostgreSQL",
+              "MariaDB",
+              "Firebird",
+              "Others"
+            ]
+
           }
         ]
       },
       "linkableTo": [
+        "MissingValuesDetection",
+        "MissingValuesInterpolation,"
+        "Anomaly Detection",
+        "OutliersValues",
         "linearProjection",
         "knn",
         "predictions"
       ]
     },
     {
-      "key": "pythonscript",
+      "key": "script",
       "type": "data",
-      "name": "Python Script",
+      "name": "Script",
       "image_file_name": "PythonScript.png",
       "input": false,
       "output": true,
       "output_data_type": "Data",
       "description": {
-        "titre": "SQL Table",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+        "titre": "Script",
+        "description": "A programming script that you can use as an input of data in your composition"
       },
       "service": {
         "url": "url",
@@ -86,6 +108,18 @@
           {
             "label": "URL: ",
             "type": "url"
+          },
+          {
+            "label": "Language",
+            "type": "list",
+            "listOption": [
+              "Python",
+              "C++",
+              "C#",
+              "Java",
+              "Julia",
+              "Others"
+            ]
           }
         ]
       },
@@ -118,6 +152,15 @@
             "label": "URL: ",
             "type": "url"
           }
+          {
+            "label": "Unit of temperature",
+            "type": "list",
+            "listOption": [
+              "C°",
+              "F°",
+              "K°"
+            ]
+          }
         ]
       },
       "linkableTo": [
@@ -130,8 +173,8 @@
       "type": "data",
       "name": "Climate Temperature Collection",
       "image_file_name": "ClimateTemperatureCollection.png",
-      "output": true,
       "input": false,
+      "output": true,
       "output_data_type": "Data",
       "description": {
         "titre": "Collect Climate Temperature",
@@ -147,6 +190,15 @@
           {
             "label": "URL: ",
             "type": "url"
+          }
+          {
+            "label": "Unit of temperature",
+            "type": "list",
+            "listOption": [
+              "C°",
+              "F°",
+              "K°"
+            ]
           }
         ]
       },
@@ -165,13 +217,21 @@
       "output_data_type": "Data",
       "description": {
         "titre": "Plot",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+        "description": "Make a plot from the data given by your composition."
       },
       "service": {
         "url": "valeur de l'url",
         "config": [
           {
-            "field_label1": "value1"
+            "label": "Type of Plot",
+            "type": "list",
+            "listOption": [
+              "Timeplot",
+              "Histogram",
+              "Bar plot",
+              "Pie Chart",
+              "Frequency graph"
+            ]
           }
         ]
       },
@@ -217,7 +277,7 @@
       "output_data_type": "model",
       "description": {
         "titre": "kNN",
-        "description": "Predict accoriding to the nearest training instances."
+        "description": "Predict accoriding to the nearest training instances following the k Nearest Neighbours algorithm."
       },
       "service": {
         "url": "valeur de l'url",
@@ -265,7 +325,7 @@
       "output_data_type": "model",
       "description": {
         "titre": "Data Training",
-        "description": "Predict accoriding to the nearest training instances."
+        "description": "The system will learn the sample of values given by the composition."
       },
       "service": {
         "url": "valeur de l'url",
@@ -273,10 +333,6 @@
           {
             "label": "Name",
             "type": "text"
-          },
-          {
-            "label": "Number of neighbors",
-            "type": "number"
           },
           {
             "label": "Metric",
@@ -760,7 +816,7 @@
       "output_data_type": "Data",
       "description": {
         "titre": "Detect outliers values",
-        "description": "This service provides a dataset of climate temperature observations."
+        "description": "Detect when values when they are not normal."
       },
       "service": {
         "url": "url",
@@ -778,7 +834,8 @@
       "linkableTo": [
         "ClimateTemperature",
         "OutliersValuesInterpolation",
-      	"plot"
+      	"plot",
+        "kmedoids"
       ]
     },
     {
@@ -791,7 +848,7 @@
       "output_data_type": "Data",
       "description": {
         "titre": "Interpolate outliers values",
-        "description": "This service provides a dataset of climate temperature observations."
+        "description": "Adapt your wrong values detected before by Anomaly Detection."
       },
       "service": {
         "url": "url",
@@ -855,7 +912,7 @@
       "output_data_type": "",
       "description": {
         "titre": "K-Means",
-        "description": "Display a dendrogram of a hierarchical clustering constructed from the input distance matrix."
+        "description": "Display a dendrogram of a hierarchical clustering constructed from the input distance matrix following the k-means method."
       },
       "service": {
         "url": "valeur de l'url",
@@ -883,7 +940,7 @@
       "output_data_type": "",
       "description": {
         "titre": "K-Medoids",
-        "description": "Display a dendrogram of a hierarchical clustering constructed from the input distance matrix."
+        "description": "Display a dendrogram of a hierarchical clustering constructed from the input distance matrix following the k-medoids method."
       },
       "service": {
         "url": "valeur de l'url",
